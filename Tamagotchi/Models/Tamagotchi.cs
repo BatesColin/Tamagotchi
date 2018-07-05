@@ -24,14 +24,14 @@ namespace Tamagotchi.Models
     public Item(string nameTamagotchi)
     {
       _hunger = num.Next(4,8);
-      _exhaustion = num.Next(8,13);
-      _boredom = num.Next(4,13);
+      _exhaustion = num.Next(8,14);
+      _boredom = num.Next(4,14);
       _isHungry = false;
       _isExhausted = false;
       _isBored = false;
-      _hungerCounter = 3;
-      _exhaustionCounter = 3;
-      _boredomCounter = 3;
+      _hungerCounter = 4;
+      _exhaustionCounter = 4;
+      _boredomCounter = 4;
       _isDead = false;
       _name = nameTamagotchi;
       _lifespan = 0;
@@ -66,7 +66,7 @@ namespace Tamagotchi.Models
         }
         else
         {
-          _hungerCounter = 3;
+          _hungerCounter = 4;
         }
         if(_isExhausted == true)
         {
@@ -74,7 +74,7 @@ namespace Tamagotchi.Models
         }
         else
         {
-          _exhaustionCounter = 3;
+          _exhaustionCounter = 4;
         }
         if(_isBored == true)
         {
@@ -82,7 +82,7 @@ namespace Tamagotchi.Models
         }
         else
         {
-          _boredomCounter = 3;
+          _boredomCounter = 4;
         }
       }
       if(_hungerCounter == 0 || _exhaustionCounter == 0 || _boredomCounter == 0)
@@ -97,16 +97,17 @@ namespace Tamagotchi.Models
         tamagotchi._lifespan++;
         if(tamagotchi._lifespan %tamagotchi._hunger == 0)
         {
-          tamagotchi._isHungry == true;
+          tamagotchi._isHungry = true;
         }
         if(tamagotchi._lifespan %tamagotchi._exhaustion == 0)
         {
-          tamagotchi._isExhausted == true;
+          tamagotchi._isExhausted = true;
         }
-        if(tamagotchi._lifespan %tamagotchi._bored == 0)
+        if(tamagotchi._lifespan %tamagotchi._boredom == 0)
         {
-          tamagotchi._isBored == true;
+          tamagotchi._isBored = true;
         }
+        tamagotchi.WarningCheck();
       }
     }
     public int GetId()

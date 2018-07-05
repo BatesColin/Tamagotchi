@@ -44,13 +44,15 @@ namespace Tamagotchi.Controllers
     [HttpPost("/items/play")]
     public ActionResult Play()
     {
-      // Item.GameTick();
+      List<Item> allItems = Item.GetAll();
+      Item.GameTick(allItems);
       return View();
     }
     [HttpPost("/items/sleep")]
     public ActionResult Sleep()
     {
-      // Item.GameTick();
+      List<Item> allItems = Item.GetAll();
+      Item.GameTick(allItems);
       return View();
     }
   }
