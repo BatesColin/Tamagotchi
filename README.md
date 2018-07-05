@@ -44,3 +44,4 @@ _Created with Atom editor._
 *No license required*
 
 Copyright (c) 2018 **_Nick Rogers and Colin Bates_**
+# Tamagotchi
