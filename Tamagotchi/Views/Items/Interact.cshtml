@@ -1,0 +1,21 @@
+<h2>@Model.GetName()</h2>
+<p>Hunger: @Model.GetHunger()</p>
+<p>Exhaustion: @Model.GetExhaustion()</p>
+<p>Bored: @Model.GetBoredom()</p>
+<p>Age: @Model.GetLifespan()</p>
+<p>Is Hungry?: @Model.GetIsHungry()</p>
+<p>Is Exhausted?: @Model.GetIsExhausted()</p>
+<p>Is Bored?: @Model.GetIsBored()</p>
+<p>Hunger Counter: @Model.GetHungerCounter()</p>
+<p>Exhaustion Counter: @Model.GetExhaustionCounter()</p>
+<p>Boredom Counter: @Model.GetBoredomCounter()</p>
+<form action="/items/feed" method="post">
+  <button type="submit" name="button">Feed</button>
+</form>
+<form action="/items/sleep" method="post">
+  <button type="submit" name="button">Put To Sleep</button>
+</form>
+<form action="/items/play" method="post">
+  <button type="submit" name="button">Play With</button>
+</form>
+<p><a href='/items'>View Tamagotchis<a/></p>

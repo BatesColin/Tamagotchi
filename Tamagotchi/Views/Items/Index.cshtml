@@ -1,0 +1,11 @@
+<h1>Your Tamagotchis</h1>
+<ol>
+  @foreach(var item in Model)
+  {
+    <li>
+      <p><a href='/items/@item.GetId()'>@item.GetName()</a></p>
+      <p>@item.GetStatus()</p>
+    </li>
+  }
+</ol>
+<p><a href='/items/new'>Add a New Tamagotchi!<a/></p>

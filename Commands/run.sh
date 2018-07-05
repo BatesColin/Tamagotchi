@@ -1,0 +1,2 @@
+cd ../Tamagotchi/
+dotnet run
